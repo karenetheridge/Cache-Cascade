@@ -4,7 +4,6 @@ package Cache::Cascade;
 # ABSTRACT: Get/set values to/from a group of caches, with some advanced semantics.
 
 use Any::Moose;
-
 use Carp qw/croak/;
 
 sub _eval {
@@ -253,5 +252,3 @@ changing data then you should use a cascade.
 L<Cache>
 
 =cut
-
-
