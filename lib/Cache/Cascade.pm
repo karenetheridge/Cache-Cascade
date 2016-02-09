@@ -162,7 +162,7 @@ may already have the result we want in the cheap cache. Configure your
 expiration policy so that there is approximately an order of magnitude better
 probability of cache hits (bigger cache) for each level of the cascade.
 
-=item FIELDS
+=head1 FIELDS
 
 =over 4
 
@@ -226,8 +226,6 @@ These two methods return the first callback they found.
 =item set_validate_callback
 
 These two methods set the callback for all the caches.
-
-=item 
 
 =item get_and_float_result $key, @caches
 
