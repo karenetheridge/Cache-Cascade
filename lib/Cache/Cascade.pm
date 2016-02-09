@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 
 package Cache::Cascade;
+# ABSTRACT: Get/set values to/from a group of caches, with some advanced semantics.
+
 use Any::Moose;
 
 use Carp qw/croak/;
@@ -13,7 +15,7 @@ sub _eval {
 
 use namespace::clean -except => [qw(meta)];
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 has caches => (
 	isa => "ArrayRef",
@@ -125,11 +127,6 @@ __PACKAGE__;
 __END__
 
 =pod
-
-=head1 NAME
-
-Cache::Cascade - Get/set values to/from a group of caches, with some advanced
-semantics.
 
 =head1 SYNOPSIS
 
@@ -254,12 +251,6 @@ changing data then you should use a cascade.
 =head1 SEE ALSO
 
 L<Cache>
-
-=head1 VERSION CONTROL
-
-This module is maintained using Darcs. You can get the latest version from
-L<http://nothingmuch.woobling.org/Cache-Cascade/>, and use C<darcs send> to
-commit changes.
 
 =cut
 

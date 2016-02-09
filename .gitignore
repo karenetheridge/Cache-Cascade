@@ -1,0 +1,6 @@
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/Cache-Cascade-*/
+/Cache-Cascade-*.tar.gz

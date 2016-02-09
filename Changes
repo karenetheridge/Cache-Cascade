@@ -1,3 +1,8 @@
+Revision history for Cache-Cascade
+
+{{$NEXT}}
+        - convert packaging to Dist::Zilla
+
 0.05
 	- use Any::Moose instead of Squirrel
 
