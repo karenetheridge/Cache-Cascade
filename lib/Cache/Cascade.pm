@@ -141,6 +141,8 @@ __END__
 
 =head1 DESCRIPTION
 
+=for stopwords tradeoff multiserver MemoryCache FastMmap
+
 In a multiprocess, and especially a multiserver application caching is a very
 effective means of improving results.
 
@@ -154,10 +156,10 @@ This module attempts to make a transparent cascade of caches using several
 backends.
 
 The idea is to search from the cheapest backend to the most expensive, and
-depending on the options also cache results in the chepear backends.
+depending on the options also cache results in the cheaper backends.
 
 The benefits of using a cascade are that if the chance of a hit is much higher
-in a slow cache, but checking a cheap cache is negligiable in comparison, we
+in a slow cache, but checking a cheap cache is negligible in comparison, we
 may already have the result we want in the cheap cache. Configure your
 expiration policy so that there is approximately an order of magnitude better
 probability of cache hits (bigger cache) for each level of the cascade.
@@ -235,7 +237,7 @@ This is used to implement the C<float_hits> behavior of C<get> recursively.
 
 =head1 CAVEATS
 
-When you set or remove a key from the cascade and this propagates downards, for
+When you set or remove a key from the cascade and this propagates downwards, for
 example from MemoryCache to FastMmap, other cascades will not notice the change
 until their own MemoryCache is expired.
 
