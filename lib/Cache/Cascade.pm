@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 package Cache::Cascade;
 # ABSTRACT: Get/set values to/from a group of caches, with some advanced semantics.
 
