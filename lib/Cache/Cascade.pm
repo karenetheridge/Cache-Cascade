@@ -1,8 +1,10 @@
 package Cache::Cascade;
 # ABSTRACT: Get/set values to/from a group of caches, with some advanced semantics.
 
-use Any::Moose;
+use strictures 2;
+use Moo;
 use Carp qw/croak/;
+use Types::Standard qw(ArrayRef Bool);
 
 sub _eval {
 	my ( $code, %args ) = @_;
@@ -10,23 +12,23 @@ sub _eval {
 	eval $code;
 }
 
-use namespace::clean -except => [qw(meta)];
+use namespace::autoclean;
 
 our $VERSION = '0.07';
 
 has caches => (
-	isa => "ArrayRef",
+	isa => ArrayRef,
 	is  => "rw",
 );
 
 has float_hits => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 0,
 );
 
 has set_deep => (
-	isa => "Bool",
+	isa => Bool,
 	is  => "rw",
 	default => 1,
 );
@@ -116,8 +118,6 @@ sub [% method %] {
 CODE
 	}
 }
-
-__PACKAGE__->meta->make_immutable if __PACKAGE__->meta->can("make_immutable");
 
 __PACKAGE__;
 
