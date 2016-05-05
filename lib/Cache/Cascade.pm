@@ -14,7 +14,7 @@ sub _eval {
 
 use namespace::autoclean;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 has caches => (
 	isa => ArrayRef,

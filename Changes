@@ -1,5 +1,7 @@
 Revision history for Cache-Cascade
 
+{{$NEXT}}
+
 0.07      2016-05-05 22:48:46Z
           - switch from Any::Moose to Moo
 
